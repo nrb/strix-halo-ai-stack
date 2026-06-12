@@ -3,15 +3,15 @@
 
 # CA mode: ACME
 # ACME/certbot against a running step-ca or other ACME supporting instance
-ansible_ca_acme_url: https://stepca.example.lan/acme/acme/directory
-ansible_ca_root_crt: "{{ playbook_dir }}/files/step-ca/root_ca.crt"
-ansible_ca_acme_email: "{{ ansible_hostname }}@example.com"
+# ansible_ca_acme_url: https://stepca.example.lan/acme/acme/directory
+# ansible_ca_root_crt: "{{ playbook_dir }}/files/step-ca/root_ca.crt"
+# ansible_ca_acme_email: "{{ ansible_hostname }}@example.com"
 
 # CA mode: Self Signed
 # ansible_ca_root_key and ansible_ca_root_crt together enable local CA signing.
 # The playbook generates these files automatically on first run if the key is absent.
-#ansible_ca_root_crt: "{{ playbook_dir }}/files/step-ca/root_ca.crt"
-#ansible_ca_root_key: "{{ playbook_dir }}/files/step-ca/root_ca.key"
+ansible_ca_root_crt: "{{ playbook_dir }}/files/step-ca/root_ca.crt"
+ansible_ca_root_key: "{{ playbook_dir }}/files/step-ca/root_ca.key"
 
 
 # llama-swap:
